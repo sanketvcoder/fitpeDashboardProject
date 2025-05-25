@@ -1,0 +1,236 @@
+.dashboard {
+  flex: 1;
+  padding: 0px 30px 0px 30px;
+  background-color: #f8fbff;
+  height: 100%;
+  overflow-y: auto;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.dashboard-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.heading {
+  font-size: 28px;
+  color: #003366;
+  font-weight: 700;
+}
+
+.week {
+  background-color: #e4f6ff;
+  color: #008cff;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.week:hover {
+  background-color: #d0eeff;
+}
+
+/* GRID LAYOUT FOR 3D + INFO CARDS */
+.main-dashboard-component {
+  display: grid;
+  height: 46vh;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 16px;
+  background-color: white;
+  padding: 16px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+  position: relative;
+  padding-bottom: 40px;
+  padding-right: 50px;
+  box-sizing: border-box;
+}
+
+.first-box {
+  grid-row: span 3;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f8ff;
+}
+
+.first-box canvas {
+  width: 100% !important;
+  height: 100% !important;
+  display: block;
+  object-fit: contain;
+}
+
+/* ORGAN INFO BOXES */
+.third-box.info-box {
+  display: flex;
+  align-items: center;
+  background-color: #f0f8ff;
+  border-radius: 16px;
+  padding: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+  height: 100%;
+  gap: 12px;
+}
+
+.image {
+  width: 45px;
+  height: 45px;
+  flex-shrink: 0;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.organ-status {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.organ-status h4 {
+  margin: 0 0 4px;
+  color: #003366;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.organ-status p {
+  font-size: 12px;
+  color: #555;
+  margin: 0 0 4px;
+}
+
+.status-bar {
+  height: 8px;
+  background-color: #ddd;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.status-bar::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  border-radius: 10px;
+  left: 0;
+  top: 0;
+  background-color: #56ccf2;
+  width: var(--progress, 50%);
+}
+
+/* DETAIL LINK */
+.details {
+  position: absolute;
+  right: 20px;
+  bottom: 10px;
+}
+
+.det {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: gray;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.details .det:hover {
+  color: black;
+}
+
+/* ACTIVITY BOX */
+.fourth-box.activity-box {
+  margin-top: 10px;
+  padding: 20px;
+  background-color: #f0f8ff;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.activity-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.activity-header h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2e3a59;
+}
+
+.appointment-note {
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* ACTIVITY BAR CHART */
+.activity-chart {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.activity-column {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40px;
+}
+
+.bars {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 4px;
+  height: 100px;
+}
+
+/* Default bar */
+.bar {
+  width: 6px;
+  border-radius: 4px;
+  background-color: #e0e0e0;
+}
+
+/* Dynamic bars */
+.bar-0 {
+  background-color: #6c63ff;
+}
+
+.bar-1 {
+  background-color: #00cfff;
+}
+
+.bar-2 {
+  background-color: #56ccf2;
+}
+
+.empty-bar {
+  width: 6px;
+  height: 0px;
+  background: transparent;
+}
+
+.day-label {
+  margin-top: 8px;
+  font-size: 12px;
+  color: #999;
+}

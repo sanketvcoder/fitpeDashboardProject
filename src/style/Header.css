@@ -1,0 +1,118 @@
+.header-container {
+  display: grid;
+  grid-template-columns: 20% 40% 40%;
+  grid-template-rows: 60px;
+  align-items: center;
+  font-size: 22px;
+  border-radius: 37px 37px 0px 0px;
+  background-color: #f0f8ff;
+}
+
+/* 1st Column - Logo */
+.logo-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #003366;
+  font-size: 35px;
+}
+
+.logo-block span {
+  color: rgb(86, 205, 245);
+}
+
+/* 2nd Column - Search and Bell */
+.middle-column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f8fbff;
+  height: 100%;
+  width: 100%;
+}
+
+.search-bell-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 100%;
+  justify-content: center;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  padding: 12px 20px;
+  border-radius: 15px;
+  background-color: #f8fbff;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search:focus-within {
+  border: 2px solid lightblue;
+  box-shadow: 0 0 10px rgba(173, 216, 230, 0.8);
+}
+
+.search-icon {
+  color: gray;
+  margin-right: 12px;
+  font-size: 20px;
+}
+
+.search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 18px;
+}
+
+.bell-icon {
+  color: #003366;
+  cursor: pointer;
+  font-size: 22px;
+}
+
+/* 3rd Column - User Profile */
+.user-profile {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+}
+
+.user-pic {
+  width: 40px;
+  height: 40px;
+  background-color: lightblue;
+  border-radius: 30%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-pic img {
+  width: 25px;
+  height: 25px;
+  object-fit: contain;
+}
+
+.add-more {
+  width: 40px;
+  height: 40px;
+  background-color: #003366;
+  color: white;
+  border-radius: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 22px;
+  cursor: pointer;
+  margin-right: 30px;
+}
