@@ -1,6 +1,7 @@
 import SideBar from "./SideBar"
 import '../style/Global.css'
 import Dashboard from "./Dashboard"
+import ScheduleDashboard from "./ScheduleDashboard"
 function BodyContent(){
     return(
         <div className="body-part">
@@ -11,7 +12,7 @@ function BodyContent(){
                 <Dashboard/>
             </div>
             <div className="third-3-col">
-
+                <ScheduleDashboard/>
             </div>
         </div>
     )
