@@ -32,6 +32,18 @@ body {
   height: 100%;
 }
 
+@media (max-width: 768px) {
+  .body-part {
+    grid-template-columns: 100%;
+    grid-template-rows: auto auto auto;
+  }
+
+  .first-1-col,
+  .sec-2-col,
+  .third-3-col {
+    width: 100%;
+  }
+}
 .app-container{
   min-height: 100vh;
   padding: 20px;

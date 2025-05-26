@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faBell } from '@fortawesome/free-solid-svg-icons';
-import boyImage from '../asserts/boyimage.jpg'
+import boyImage from '../asserts/user.png'
 import '../style/Header.css'
 function Header(){
     return(
