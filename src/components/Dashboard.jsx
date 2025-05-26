@@ -3,8 +3,7 @@ import "../style/Dashboard.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
-import ThreeAnimation, {organs} from "./mockData";
-
+import ThreeAnimation, { organs } from "./mockData";
 
 function Dashboard() {
   return (
@@ -16,21 +15,32 @@ function Dashboard() {
 
       <div className="main-dashboard-component">
         <div className="first-box">
-          <ThreeAnimation/>
+          <ThreeAnimation />
         </div>
 
-        {organs.map((organ, index) => (
-          <div className="third-box info-box" key={index}>
-            <div className="image">
-              <img src={organ.image} alt={organ.name} />
+        {organs.map((organ, index) => {
+          // Set dynamic class based on index for different bar colors
+          let statusBarClass = '';
+          if (index === 0) statusBarClass = 'bar-brown';
+          else if (index === 1) statusBarClass = 'bar-grey';
+          else if (index === 2) statusBarClass = 'bar-orange';
+
+          return (
+            <div className="third-box info-box" key={index}>
+              <div className="image">
+                <img src={organ.image} alt={organ.name} />
+              </div>
+              <div className="organ-status">
+                <h4>{organ.name}</h4>
+                <p>Date: 26 Oct 2021</p>
+                <div
+                  className={`status-bar ${statusBarClass}`}
+                  style={{ '--progress': organ.progress }}
+                ></div>
+              </div>
             </div>
-            <div className="organ-status">
-              <h4>{organ.name}</h4>
-              <p>Date: 26 Oct 2021</p>
-              <div className="status-bar" style={{ '--progress': organ.progress }}></div>
-            </div>
-          </div>
-        ))}
+          );
+        })}
 
         <div className="details">
           <div className="det">

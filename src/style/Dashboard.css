@@ -133,6 +133,17 @@
   background-color: #56ccf2;
   width: var(--progress, 50%);
 }
+.bar-brown::after {
+  background-color: brown !important;
+}
+
+.bar-grey::after {
+  background-color: #adb9f8 !important;
+}
+
+.bar-orange::after {
+  background-color: #FFD580 !important; /* light orange */
+}
 
 /* DETAIL LINK */
 .details {
