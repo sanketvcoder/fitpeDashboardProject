@@ -20,7 +20,7 @@ const ThreeAnimation =()=>{
     return(
         <Canvas camera={{ position: [0, 0, 5], fov: 35 }} style={{ width: '100%', height: '100%' }}>
             <ambientLight intensity={1.5} />
-            <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={1.5} />
+            <OrbitControls enableZoom={true} autoRotate autoRotateSpeed={1.5} />
             <Suspense fallback={null}>
                 <Center>
                     <Body scale={1.2} />

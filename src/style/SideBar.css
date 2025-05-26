@@ -4,6 +4,7 @@
   border-radius: 0 0 0 37px;
   padding: 25px 20px;
   display: flex;
+  width: 100%;
   flex-direction: column;
   justify-content: space-between;
   transition: transform 0.3s ease-in-out;
@@ -49,11 +50,11 @@
 }
 
 .sidebar-footer {
-  padding-top: 14px;
+  padding-top: 45px;
   border-top: 1px solid #eee;
 }
 
-/* ✅ Responsive Styles */
+/* Responsive Styles */
 @media (max-width: 768px) {
   .side-wrapper {
     position: relative;

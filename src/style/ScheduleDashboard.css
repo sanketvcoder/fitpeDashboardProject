@@ -1,6 +1,6 @@
 .schedule-dashboard {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  padding: 0px 20px 14px 20px;
+  padding: 0px 20px 10px 20px;
   background-color: #f0f8ff;
   color: #333;
   border-radius: 0px 0px 37px 0px
@@ -11,7 +11,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
 .month {
@@ -113,7 +113,7 @@
   align-items: flex-start;
   background: #ffffff;
   border-radius: 22px;
-  padding: 14px;
+  padding: 10px;
   min-width: 220px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   flex: 0 0 48%;
@@ -182,7 +182,7 @@
   color: darkblue;
   font-size: 20px;
   font-weight: 700;
-  margin-bottom: 19px;
+  margin-bottom: 1px;
 }
 
 .day-schedule {
